@@ -11,6 +11,7 @@ Change the database name, user and password in the yahptest/settings.py file to 
 Run from the root folder:
 
 `python manage.py makemigrations checkusers`
+
 `python manage.py migrate`
 
 To create the appropriate tables in the database.
@@ -18,7 +19,7 @@ To create the appropriate tables in the database.
 Then run `python updater.py` to populate the database with information from the api
 
 Finally run `python manage.py runserver` to execute the application and access it at
-`http://127.0.0.1:8000/
+http://127.0.0.1:8000/
 
 
 
