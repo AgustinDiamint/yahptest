@@ -14,7 +14,10 @@
     color: blue;
 }
 
-.user-card .card {
-    color: red;
-    width: 5rem;
+#card-sizes {
+    width: 25rem;
+}
+
+#users-list {
+    align-content: center;
 }

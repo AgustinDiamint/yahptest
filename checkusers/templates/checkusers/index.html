@@ -17,27 +17,29 @@
     </nav>
     <h1 class="page-title"> XasTree Financial Services' Clients </h1>
     <div class = "container">
-        {% if users_list %}
-            {% for user in users_list %}
-                <div class="card user-card">
-                    <div class="card-body">
-                        <div class="media">
-                            {% with 'images/'|add:user.first_name|add:user.last_name|add:'.jpg' as image_static %}
-                                <img src= "{% static image_static %}" class="mr-3">
-                            {% endwith %}
-                            <div class="media-body"> 
-                                <h3>{{user.first_name}} {{user.last_name}} </h3>
-                                <p><b>Email: </b>{{user.email}}</p>
+        <div class="row justify-content-center"> 
+            {% if users_list %}
+                {% for user in users_list %}
+                    <div class="column card" id="card-sizes">
+                        <div class="card-body" >
+                            <div class="media">
+                                {% with 'images/'|add:user.first_name|add:user.last_name|add:'.jpg' as image_static %}
+                                    <img src= "{% static image_static %}" class="mr-3">
+                                {% endwith %}
+                                <div class="media-body"> 
+                                    <h3>{{user.first_name}} {{user.last_name}} </h3>
+                                    <p><b>Email: </b>{{user.email}}</p>
+                                </div>
                             </div>
+                            <p><b>Investment type:</b> {{user.investment.investment_type}}</p>
+                            <p><b>Investment Manager:</b> {{user.investment.manager}} </p>
                         </div>
-                        <p><b>Investment type:</b> {{user.investment.investment_type}}</p>
-                        <p><b>Investment Manager:</b> {{user.investment.manager}} </p>
                     </div>
-                </div>
-            {% endfor %}
-        {% else %}
-            <p> NO users available</p>
-        {% endif %}
+                {% endfor %}
+            {% else %}
+                <p> NO users available</p>
+            {% endif %}
+        </div>
     </div>
 </body>
 
