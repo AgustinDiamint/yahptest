@@ -18,6 +18,7 @@
     <h1 class="page-title"> XasTree Financial Services' Clients </h1>
     <div class = "container">
         <div class="row justify-content-center"> 
+        {% comment %} gets each user in the list and shows with corresponding info {% endcomment %}
             {% if users_list %}
                 {% for user in users_list %}
                     <div class="column card" id="card-sizes">

@@ -12,6 +12,7 @@ class Investment(models.Model):
 
 class Workers(models.Model):
     internal_id = models.IntegerField(default=0)
+    # each worker has an investment linked to it
     investment = models.ForeignKey(Investment, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
