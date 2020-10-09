@@ -6,7 +6,7 @@
 4. mysql-to-python-connector
 
 ## Steps to run
-Change the database name, user and password in the yahptest/settings.py file to match the local database information. 
+Change the database name, user and password in the *yahptest/settings.py* file to match the local database information. 
 
 Run from the root folder:
 
