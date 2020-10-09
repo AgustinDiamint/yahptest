@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "checkusers.apps.CheckusersConfig"
+    "checkusers.apps.CheckusersConfig",
 ]
 
 MIDDLEWARE = [
@@ -122,3 +122,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
+STATICFILES_DIRS = [
+    "/checkusers/static/",
+]

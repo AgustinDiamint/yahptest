@@ -9,8 +9,9 @@ class Investment(models.Model):
     def __str__(self):
         return self.investment_type
 
+
 class Workers(models.Model):
-    internal_id = models.IntegerField(default  = 0)
+    internal_id = models.IntegerField(default=0)
     investment = models.ForeignKey(Investment, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
